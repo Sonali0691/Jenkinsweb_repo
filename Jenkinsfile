@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/your-repo/multi-page-webapp.git'
+                    url: 'https://github.com/Sonali0691/Jenkinsweb_repo.git'
             }
         }
 
