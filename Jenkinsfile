@@ -15,8 +15,8 @@ pipeline {
                 sh '''
                 echo "Deploying application..."
 
-                sudo rm -rf /var/www/html/*
-                sudo cp -r * /var/www/html/
+                rm -rf /var/www/html/*
+                cp -r * /var/www/html/
                 '''
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Restart Web Server') {
             steps {
                 sh '''
-                sudo systemctl restart apache2 || sudo systemctl restart nginx
+                systemctl restart apache2 || systemctl restart nginx
                 '''
             }
         }
